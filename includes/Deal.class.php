@@ -38,9 +38,9 @@ class AC_Deal extends ActiveCampaign {
 		return $response;
 	}
 
-	function list_($params) {
+	function list_($params, $post_data) {
 		$request_url = "{$this->url}&api_action=deal_list&api_output={$this->output}&{$params}";
-		$response = $this->curl($request_url);
+		$response = $this->curl($request_url, $post_data);
 		return $response;
 	}
 
@@ -74,9 +74,9 @@ class AC_Deal extends ActiveCampaign {
 		return $response;
 	}
 
-	function pipeline_list($params) {
+	function pipeline_list($params, $post_data) {
 		$request_url = "{$this->url}&api_action=deal_pipeline_list&api_output={$this->output}&{$params}";
-		$response = $this->curl($request_url);
+		$response = $this->curl($request_url, $post_data);
 		return $response;
 	}
 
@@ -98,9 +98,9 @@ class AC_Deal extends ActiveCampaign {
 		return $response;
 	}
 
-	function stage_list($params) {
+	function stage_list($params, $post_data) {
 		$request_url = "{$this->url}&api_action=deal_stage_list&api_output={$this->output}&{$params}";
-		$response = $this->curl($request_url);
+		$response = $this->curl($request_url, $post_data);
 		return $response;
 	}
 
